@@ -47,7 +47,6 @@ let subscriptionBike = rtm.subscribe(channelBike, RTM.SubscriptionMode.SIMPLE);
 subscriptionBike.on('rtm/subscription/data', function (pdu) {
   pdu.body.messages.forEach(function (msg) {
     
-    console.log('MESSAGE STATION', msg.station_id);
 
     //line chart data
     if (msg.station_id < 300) {

@@ -8,7 +8,6 @@
   let radius = width / 2;
 
   let dataCache = {};
-  //let svg;
   let settings;
 
   socket.on('sendPieData', (data) => {
@@ -27,6 +26,8 @@
       if (needsChange) drawContent(settings, data);
     }
   })
+
+
 
   function drawGrid(data) {
     width = data[0].setWidth - margin.left - margin.right;
